@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谭天伟 - 中国工程院院士 | 北京化工大学校长</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --gold-color: #d4af37;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* 导航栏 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 31, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* 英雄区域 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1f2e 0%, #2d3561 50%, #1a5f7a 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(87,197,182,0.1) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        .hero-avatar {
+            width: 220px;
+            height: 280px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 0 auto 30px;
+            border: 5px solid var(--gold-color);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .hero-avatar:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .titles {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero .titles span {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 5px 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-quote {
+            font-size: 20px;
+            font-style: italic;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            border-left: 4px solid var(--gold-color);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .hero-links {
+            margin-top: 30px;
+        }
+
+        .hero-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .hero-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(87,197,182,0.4);
+            border-color: var(--gold-color);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* 内容区域通用样式 */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: var(--dark-bg);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        /* 个人简介 */
+        .intro {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .intro-text {
+            font-size: 17px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* 教育背景时间线 */
+        .education {
+            background: linear-gradient(135deg, #1a1f2e, #2d3561);
+            border-radius: 20px;
+            padding: 60px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .education .section-title {
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-color), var(--gold-color));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border-left: 3px solid var(--accent-color);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(10px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 30px;
+            width: 16px;
+            height: 16px;
+            background: var(--gold-color);
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+        }
+
+        .timeline-year {
+            font-size: 18px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        /* 科研成果 */
+        .achievements {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+
+        .achievement-number {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .achievement-label {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .achievement-desc {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        /* 研究领域 */
+        .research {
+            background: linear-gradient(135deg, #159895, #1a5f7a);
+            border-radius: 20px;
+            padding: 60px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .research .section-title {
+            color: white;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .research-card {
+            background: rgba(255,255,255,0.1);
+            padding: 35px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: scale(1.02);
+        }
+
+        .research-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .research-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .research-card p {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* 重点项目 */
+        .projects {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .project-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .project-item {
+            display: flex;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        .project-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .project-icon {
+            font-size: 45px;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+
+        .project-content h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        /* 荣誉奖项 */
+        .honors {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .honor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .honor-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            border-radius: 12px;
+            border-left: 4px solid var(--gold-color);
+            transition: all 0.3s;
+        }
+
+        .honor-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .honor-icon {
+            font-size: 35px;
+            margin-right: 20px;
+        }
+
+        .honor-content h4 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .honor-content p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* 学术观点 */
+        .quotes {
+            background: linear-gradient(135deg, #2d3561, #1a1f2e);
+            border-radius: 20px;
+            padding: 60px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .quotes .section-title {
+            color: white;
+        }
+
+        .quote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .quote-card {
+            background: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 15px;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .quote-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .quote-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 80px;
+            color: var(--accent-color);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-source {
+            text-align: right;
+            color: var(--accent-color);
+            font-size: 14px;
+        }
+
+        /* 相关链接 */
+        .links {
+            background: linear-gradient(135deg, #1a5f7a, #159895);
+            border-radius: 20px;
+            padding: 60px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .links .section-title {
+            color: white;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .link-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .link-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .link-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .link-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .link-card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #1a1f2e;
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer-info {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .footer-info p {
+            margin: 10px 0;
+        }
+
+        .footer-divider {
+            width: 100px;
+            height: 2px;
+            background: var(--accent-color);
+            margin: 30px auto;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-avatar {
+                width: 180px;
+                height: 230px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .intro, .education, .achievements, .research, .projects, .honors, .quotes, .links {
+                padding: 40px 25px;
+            }
+
+            .project-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* 动画效果 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#intro">个人简介</a></li>
+            <li><a href="#education">教育背景</a></li>
+            <li><a href="#research">研究领域</a></li>
+            <li><a href="#projects">重点项目</a></li>
+            <li><a href="#achievements">科研成果</a></li>
+            <li><a href="#honors">荣誉奖项</a></li>
+            <li><a href="#links">相关链接</a></li>
+        </ul>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <img src="https://www.buct.edu.cn/__local/6/6D/3B/6A5E2B8E7F3C4D5A6B7C8D9E0F1A2B3C.jpg" alt="谭天伟院士" onerror="this.src='https://bkimg.cdn.bcebos.com/pic/6d81800a19d8bc3eb13533ba588ba61ea8d3fd1f4030'">
+            </div>
+            <h1>谭天伟</h1>
+            <div class="titles">
+                <span>中国工程院院士</span>
+                <span>北京化工大学校长</span>
+                <span>生物化工专家</span>
+                <span>中国化学会会士</span>
+            </div>
+            <div class="hero-quote">
+                "生物制造是让工业绿色可持续发展最有希望的技术，可以重构制造业产业体系"
+            </div>
+            <div class="hero-links">
+                <a href="https://www.buct.edu.cn" target="_blank">北京化工大学官网</a>
+                <a href="https://www.cae.cn/cae/html/main/col48/column_48_1.html" target="_blank">中国工程院</a>
+                <a href="https://www.tsinghua.edu.cn" target="_blank">清华大学</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section class="intro" id="intro">
+        <h2 class="section-title">个人简介</h2>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <p>
+                    谭天伟，男，汉族，中共党员，1964年2月7日出生于甘肃天水，籍贯湖南湘潭。他是我国著名的生物化工专家，中国工程院院士，中国化学会会士，现任北京化工大学教授、博士生导师、校长、党委副书记。
+                </p>
+                <p>
+                    作为我国生物化工领域的领军人物，谭天伟院士长期致力于生物化工与生物技术的研究与教学工作。他在工业生物技术、生物炼制、生物能源等领域取得了系列原创性成果，为我国生物制造产业的发展做出了重要贡献。
+                </p>
+                <p>
+                    谭天伟院士不仅是一位杰出的科学家，也是一位优秀的教育管理者。自2012年担任北京化工大学校长以来，他带领学校在学科建设、人才培养、科学研究等方面取得了显著成就，使学校的综合实力和影响力不断提升。
+                </p>
+                <p>
+                    他在生物柴油、生物基化学品、酶工程等领域的研究成果达到了国际先进水平，多项技术已实现产业化应用，为我国的绿色制造和可持续发展做出了突出贡献。
+                </p>
+            </div>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="icon">📅</div>
+                    <h3>出生日期</h3>
+                    <p>1964年2月7日</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">📍</div>
+                    <h3>籍贯</h3>
+                    <p>湖南湘潭</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">🎓</div>
+                    <h3>最高学历</h3>
+                    <p>清华大学博士</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">🏛️</div>
+                    <h3>现任职务</h3>
+                    <p>北京化工大学校长</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">🔬</div>
+                    <h3>研究领域</h3>
+                    <p>生物化工、工业生物技术</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">⭐</div>
+                    <h3>学术荣誉</h3>
+                    <p>中国工程院院士(2011)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section class="education" id="education">
+        <h2 class="section-title">教育背景与职业历程</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1981 - 1986</div>
+                <div class="timeline-content">
+                    <h3>清华大学化学工程系</h3>
+                    <p>本科阶段学习，获化学工程专业学士学位，奠定了扎实的化工理论基础。在清华园度过了充实的五年学习时光。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1986 - 1993</div>
+                <div class="timeline-content">
+                    <h3>清华大学化学工程系</h3>
+                    <p>攻读博士学位，师从著名化工专家，深入研究生物化工领域前沿课题。1993年获得博士学位，博士论文在生物化工领域具有重要影响。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1993年</div>
+                <div class="timeline-content">
+                    <h3>加入北京化工大学</h3>
+                    <p>博士毕业后进入北京化工大学生物化工系工作，开始教学科研生涯。从讲师做起，逐步成长为学科带头人。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2011年</div>
+                <div class="timeline-content">
+                    <h3>当选中国工程院院士</h3>
+                    <p>47岁时当选中国工程院院士，成为我国生物化工领域的学术带头人。这是对他多年来在生物化工领域突出贡献的充分肯定。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2012年至今</div>
+                <div class="timeline-content">
+                    <h3>担任北京化工大学校长</h3>
+                    <p>担任校长职务已近13年，带领学校迈向世界一流学科建设高校行列。在他的领导下，北京化工大学在学科建设、人才培养、科学研究等方面取得了显著成就。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究领域 -->
+    <section class="research" id="research">
+        <h2 class="section-title">主要研究领域</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <div class="research-icon">🧬</div>
+                <h3>工业生物技术</h3>
+                <p>致力于利用生物催化剂进行化学品生产，开发绿色、高效的生物制造工艺，推动传统化工产业的转型升级。在生物催化、生物转化等方面取得重要突破。</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">🌱</div>
+                <h3>生物炼制</h3>
+                <p>研究以可再生生物质为原料，通过生物和化学转化生产能源、化学品和材料，实现资源的可持续利用。开发了多种生物基化学品的制备技术。</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">⚡</div>
+                <h3>生物能源</h3>
+                <p>开发新型生物燃料生产技术，包括生物柴油、生物乙醇等，为解决能源危机和环境污染问题提供新途径。固定化酶法生产生物柴油技术达到国际先进水平。</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">♻️</div>
+                <h3>绿色生物制造</h3>
+                <p>提出"绿色生物制造"理念，主张利用生物制造技术重构制造业产业体系，实现工业的绿色可持续发展。这一理念已成为国家战略性新兴产业的重要方向。</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">🔬</div>
+                <h3>酶工程</h3>
+                <p>研究酶的固定化技术和应用，开发高效生物催化剂，提高生物反应的效率和经济性。在脂肪酶固定化技术方面取得重要突破，实现了产业化应用。</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">🏭</div>
+                <h3>生物过程工程</h3>
+                <p>优化生物反应过程，开发新型生物反应器，实现生物制造过程的规模化和产业化。解决了从实验室到工业化的关键技术难题。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重点项目 -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">代表性研究项目</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-icon">🛢️</div>
+                <div class="project-content">
+                    <h3>固定化酶法生产生物柴油技术</h3>
+                    <p>开发了具有自主知识产权的固定化酶法生产生物柴油技术，具有条件温和、醇用量小、无污染物排放、对原料油脂无选择性等优点。该技术已实现产业化，为解决地沟油问题提供了有效途径。</p>
+                    <a href="https://www.buct.edu.cn" class="project-link" target="_blank">了解更多 →</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-icon">🧪</div>
+                <div class="project-content">
+                    <h3>生物法己二酸制备技术</h3>
+                    <p>2025年3月，"己二酸的生物制造关键技术"入选中关村论坛10项重大科技成果。该技术以可再生糖为原料，通过微生物发酵生产己二酸，颠覆了传统的石油基生产工艺。</p>
+                    <a href="http://m.toutiao.com/group/7610239386705347118/" class="project-link" target="_blank">查看报道 →</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-icon">🔋</div>
+                <div class="project-content">
+                    <h3>合成生物学联合研究转化中心</h3>
+                    <p>与诚志股份等企业合作，搭建合成生物学联合研究转化中心，加快合成生物学项目的产业化落地。推动生物制造从实验室走向工业化生产。</p>
+                    <a href="https://m.10jqka.com.cn/20240717/c659891021.shtml" class="project-link" target="_blank">查看详情 →</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-icon">🌿</div>
+                <div class="project-content">
+                    <h3>国家"863"计划项目</h3>
+                    <p>作为项目负责人，先后承担了国家"863"计划、国家"九五"、"十五"攻关项目5项，国家自然科学基金重点项目等国家级科研项目30余项。</p>
+                    <a href="https://www.buct.edu.cn" class="project-link" target="_blank">学校官网 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科研成果 -->
+    <section class="achievements" id="achievements">
+        <h2 class="section-title">科研成果与学术贡献</h2>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="achievement-number">40+</div>
+                <div class="achievement-label">国内外发明专利</div>
+                <div class="achievement-desc">在生物化工领域获得多项发明专利授权，其中多项已实现产业化应用</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-number">500+</div>
+                <div class="achievement-label">学术论文</div>
+                <div class="achievement-desc">在国内外顶级期刊发表高水平学术论文，被引用次数超过15000次</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-number">30+</div>
+                <div class="achievement-label">国家级项目</div>
+                <div class="achievement-desc">主持国家重点研发计划、国家自然科学基金等重大科研项目</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-number">10+</div>
+                <div class="achievement-label">省部级科技奖</div>
+                <div class="achievement-desc">获得国家技术发明奖、科技进步奖等多项重要奖励</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-number">50+</div>
+                <div class="achievement-label">培养博士硕士</div>
+                <div class="achievement-desc">培养了大批高层次生物化工人才，许多已成为行业骨干和学术带头人</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-number">5+</div>
+                <div class="achievement-label">学术著作</div>
+                <div class="achievement-desc">主编多部生物化工领域重要教材和专著，被全国高校广泛采用</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉奖项 -->
+    <section class="honors" id="honors">
+        <h2 class="section-title">荣誉与奖项</h2>
+        <div class="honor-list">
+            <div class="honor-item">
+                <div class="honor-icon">🏆</div>
+                <div class="honor-content">
+                    <h4>中国工程院院士</h4>
+                    <p>2011年当选，我国工程科学技术方面的最高学术称号</p>
+                </div>
+            </div>
+            <div class="honor-item">
+                <div class="honor-icon">🎖️</div>
+                <div class="honor-content">
+                    <h4>中国化学会会士</h4>
+                    <p>中国化学会最高学术荣誉，表彰在化学领域做出杰出贡献的科学家</p>
+                </div>
+            </div>
+            <div class="honor-item">
+                <div class="honor-icon">👨‍🏫</div>
+                <div class="honor-content">
+                    <h4>国家教学名师</h4>
+                    <p>表彰在高等教育教学工作中做出突出贡献的优秀教师</p>
+                </div>
+            </div>
+            <div class="honor-item">
+                <div class="honor-icon">🔬</div>
+                <div class="honor-content">
+                    <h4>国家杰出青年科学基金</h4>
+                    <p>支持在基础研究方面已取得突出成绩的青年学者</p>
+                </div>
+            </div>
+            <div class="honor-item">
+                <div class="honor-icon">⭐</div>
+                <div class="honor-content">
+                    <h4>何梁何利基金科学与技术进步奖</h4>
+                    <p>奖励在科学技术领域做出重大贡献的科技工作者</p>
+                </div>
+            </div>
+            <div class="honor-item">
+                <div class="honor-icon">📚</div>
+                <div class="honor-content">
+                    <h4>国家级教学成果奖</h4>
+                    <p>在高等教育教学改革和人才培养方面取得显著成效</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学术观点 -->
+    <section class="quotes">
+        <h2 class="section-title">学术观点与理念</h2>
+        <div class="quote-grid">
+            <div class="quote-card">
+                <p class="quote-text">
+                    生物制造是让工业绿色可持续发展最有希望的技术，可以重构制造业产业体系，特别是在化工、材料、能源等领域的应用前景广阔。
+                </p>
+                <p class="quote-source">—— 关于绿色生物制造</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">
+                    化工不是"天坑"，而是让世界更美好的重要学科。化工技术为人类提供了衣食住行所需的各种材料和产品。
+                </p>
+                <p class="quote-source">—— 关于化工专业的认识</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">
+                    我们要培养具有创新精神和实践能力的高素质人才，让他们能够在未来的科技竞争中脱颖而出。
+                </p>
+                <p class="quote-source">—— 关于人才培养</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">
+                    科学研究要面向世界科技前沿、面向经济主战场、面向国家重大需求，解决实际问题。
+                </p>
+                <p class="quote-source">—— 关于科研方向</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">
+                    中国生物发酵产能占全球70%，但工程放大成功率仍低于10%，这是我们需要突破的关键技术瓶颈。
+                </p>
+                <p class="quote-source">—— 关于产业发展现状</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">
+                    生物制造正处于产业化形成的临界点，未来10年将是生物制造产业快速发展的关键时期。
+                </p>
+                <p class="quote-source">—— 关于未来展望</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关链接 -->
+    <section class="links" id="links">
+        <h2 class="section-title">相关链接</h2>
+        <div class="links-grid">
+            <a href="https://www.buct.edu.cn" class="link-card" target="_blank">
+                <div class="link-icon">🏛️</div>
+                <h3>北京化工大学</h3>
+                <p>教育部直属全国重点大学，国家"双一流"建设高校</p>
+            </a>
+            <a href="https://www.cae.cn" class="link-card" target="_blank">
+                <div class="link-icon">🔬</div>
+                <h3>中国工程院</h3>
+                <p>中国工程技术界最高荣誉性、咨询性学术机构</p>
+            </a>
+            <a href="https://www.tsinghua.edu.cn" class="link-card" target="_blank">
+                <div class="link-icon">🎓</div>
+                <h3>清华大学</h3>
+                <p>谭天伟院士的母校，中国顶尖高等学府</p>
+            </a>
+            <a href="https://www.ccs.ac.cn" class="link-card" target="_blank">
+                <div class="link-icon">⚗️</div>
+                <h3>中国化学会</h3>
+                <p>中国化学领域最具影响力的学术团体</p>
+            </a>
+            <a href="http://www.most.gov.cn" class="link-card" target="_blank">
+                <div class="link-icon">🏢</div>
+                <h3>科技部</h3>
+                <p>主管国家科学技术工作的国务院组成部门</p>
+            </a>
+            <a href="https://www.nsfc.gov.cn" class="link-card" target="_blank">
+                <div class="link-icon">📖</div>
+                <h3>国家自然科学基金</h3>
+                <p>支持基础研究和科学人才培养</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🏛️</div>
+            <div class="footer-info">
+                <p><strong>北京化工大学</strong></p>
+                <p>Beijing University of Chemical Technology</p>
+                <p>北京市朝阳区北三环东路15号</p>
+                <p>邮编：100029 | 电话：010-64434820</p>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="copyright">
+                © 2025 谭天伟院士个人介绍页面 | 致敬中国生物化工领域的杰出科学家<br>
+                本站内容仅供学习交流使用
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // 为所有卡片添加动画
+        document.querySelectorAll('.info-card, .timeline-item, .achievement-card, .research-card, .project-item, .honor-item, .quote-card, .link-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // 导航栏滚动效果
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.background = 'rgba(26, 31, 46, 0.98)';
+            } else {
+                nav.style.background = 'rgba(26, 31, 46, 0.95)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
